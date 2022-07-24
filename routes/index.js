@@ -22,7 +22,7 @@ let messages = [
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'mini message board',
-                        messages: "messages" });
+                        messages: messages});
 });
 
 module.exports = router;
