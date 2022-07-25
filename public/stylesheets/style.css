@@ -1,8 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@700&family=Libre+Baskerville&display=swap');
+
+*{
+  list-style-type: none;
+  text-decoration: none;
+  font-family: 'Libre Baskerville', serif;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%; height: 100%;
+  display: flex; align-items: flex-start;
+  justify-content: center;
+  padding: 0;
+}
+
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: flex; flex-flow: column;
+  flex: 1 1 auto;
+  align-items: center; justify-content: flex-start;
+  font-family: 'Titan One', cursive;
+  background-color: #63a4ff;
+  background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%) fixed;
 }
 
 a {
-  color: #00B7FF;
+  color: #000000;
+  margin: 20px;
+  font-size: 20px;
+  display: flex; flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: alias;
+}
+
+p{
+  padding: 0px;
+}
+
+svg {
+  transition: transform 250ms ease-in-out 0s;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+svg:hover{
+  transform: rotate(360deg) scale(1.1);
+}
+
+svg:hover ~ div {
+  opacity: 1;
+}
+
+.add-message{
+  opacity: 0;
+  transition: opacity 250ms ease-in-out 0s;
+  bottom: -40px;
+}
+
+
+form{
+  width: 200px;
+  height: 300px;
+  display: flex; flex-flow: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: 'Libre Baskerville', serif;
+  background-color: aliceblue;
+  padding: 10px 16px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.form-div{
+  display: flex; flex-flow: column;
+  align-items: center;
+  gap: 5px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+input {
+  border-radius: 10px;
+  border: none;
+  border: 1px solid black;
+  box-sizing: border-box;
+  padding: 5px 10px;
+}
+
+textarea{
+  max-width: 160px;
+  max-height: 120px; min-height: 120px;
+}
+
+.message-board {
+  padding: 0px;
+  font-family: 'Libre Baskerville', serif;
+  margin-bottom: 20px;
+  font-size: 15px;
+  overflow: hidden;
+  display: flex; flex-flow: column;
+  gap: 18px;
+}
+
+.title {
+  font-size: 70px;
+  font-family: 'Edu SA Beginner', cursive;
+  margin: 10px;
+  margin-bottom: 5px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+.title-content{
+  font-weight: 600;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #63a4ff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.username-p {
+  width: 100%;
+  height: 30px;
+  background-color: #3add60;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  display: flex; align-items: center;
+  padding: 0px 10px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+p{
+  padding: 0px 10px;
+}
+
+.single-message {
+  background-color: aliceblue;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid black;
+}
+
+.last-p {
+  width: 100%;
+  background-color: rgb(148, 148, 148);
+  margin: 0;
+  padding: 10px 10px;
 }

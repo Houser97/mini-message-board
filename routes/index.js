@@ -21,8 +21,16 @@ let messages = [
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'mini message board',
+  res.render('index', { title: 'Mini message board',
                         messages: messages});
 });
+
+router.post("/new", function(req, res, next){
+  messages.push({text: req.body.textUser,
+                 user: req.body.username,
+                 date: new Date()});
+        
+  res.redirect("/");
+})
 
 module.exports = router;
